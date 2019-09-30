@@ -1,5 +1,6 @@
 <?php
-$nomeSitema = "Site top";
+$nomeSitema = "Cursos Aí!";
+$usuario = ["nome"=>"Vinicius"];
 ?>
 
 <!DOCTYPE html>
@@ -19,16 +20,23 @@ $nomeSitema = "Site top";
             <?php echo $nomeSitema;?>
             </h1>
             <nav>
-                <ul class="nav">
+            <ul class="nav">
+                <?php if (isset($usuario) && $usuario != "") {?>
+                
                     <li class="nav-item">
                         <a class="nav-link" href="#">Cursos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Olá <?php echo $usuario{'nome'}; ?></a>
+                    </li>
+                <?php }else {?>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Cadastrar</a>
                     </li>
+                <?php } ?>
                 </ul>
             </nav>
         </div>
@@ -36,30 +44,31 @@ $nomeSitema = "Site top";
     <main>
         <section class="container">
     
-                <div class="row justyfy-content-around" style="width: 18rem;">
-                    <div class="col-lg-3-card card text-center">
+                <div class="d-flex justyfy-content-between main" style="">
+                    <div class="card text-center mr-4">
                     <h2>Título do produto</h2>
                     <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
                         <div class="card-body">
                             <p class="card-text">R$15,00</p><br>
                             <a link href="compre já">Buy</a>
                         </div>
-                </div>
-                <div class="card text-center" style="width: 18rem;">
-                    <h2>Título do produto</h2>
-                    <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
-                        <div class="card-body">
-                            <p class="card-text">R$15,00</p><br>
-                            <a link href="compre já">Buy</a>
+                    </div>
+                        <div class="card text-center mr-4" style="">
+                            <h2>Título do produto</h2>
+                            <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
+                                <div class="card-body">
+                                    <p class="card-text">R$15,00</p><br>
+                                    <a link href="compre já">Buy</a>
+                                </div>
                         </div>
-                </div>
-                <div class="card text-center" style="width: 18rem;">
-                    <h2>Título do produto</h2>
-                    <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
-                        <div class="card-body">
-                            <p class="card-text">R$15,00</p><br>
-                            <a link href="compre já">Buy</a>
-                        </div>
+                    <div class="card text-center" style="">
+                        <h2>Título do produto</h2>
+                        <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
+                            <div class="card-body">
+                                <p class="card-text">R$15,00</p><br>
+                                <a link href="compre já">Buy</a>
+                            </div>
+                    </div>
                 </div>
 
         </section>

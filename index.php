@@ -14,49 +14,55 @@ $nomeSitema = "Site top";
 </head>
 <body>
 <header>
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1><?php echo $nomeSitema;?></h1>
+        <div class="navbar">
+            <h1 id="logo">
+            <?php echo $nomeSitema;?>
+            </h1>
             <nav>
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="">
-                            Cursos
-                        </a>
+                        <a class="nav-link" href="#">Cursos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
-                            Login
-                        </a>
+                        <a class="nav-link" href="#">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
-                            Cadastrar
-                        </a>
+                        <a class="nav-link" href="#">Cadastrar</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <?php
-        $nome="Vinicius";
-        $idade= 10;
-        $usuario= ["Vinicius","Oliveira", 21, ["musica","café","skate"]];
-        
-        $usuarioDois = ["nome"=>"vinicius","sobrenome"=>"oliveira"];
-        
-       // var_dump($usuario);
+    <main>
+        <section class="container">
+    
+                <div class="row justyfy-content-around" style="width: 18rem;">
+                    <div class="col-lg-3-card card text-center">
+                    <h2>Título do produto</h2>
+                    <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
+                        <div class="card-body">
+                            <p class="card-text">R$15,00</p><br>
+                            <a link href="compre já">Buy</a>
+                        </div>
+                </div>
+                <div class="card text-center" style="width: 18rem;">
+                    <h2>Título do produto</h2>
+                    <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
+                        <div class="card-body">
+                            <p class="card-text">R$15,00</p><br>
+                            <a link href="compre já">Buy</a>
+                        </div>
+                </div>
+                <div class="card text-center" style="width: 18rem;">
+                    <h2>Título do produto</h2>
+                    <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
+                        <div class="card-body">
+                            <p class="card-text">R$15,00</p><br>
+                            <a link href="compre já">Buy</a>
+                        </div>
+                </div>
 
-        $usuario[] = "Guitarra";
-        
-        echo "<br>";
-        
-        //var_dump($usuario);
-        
-        echo $usuario[0&&1];
-        
-        echo "<h1>".$usuario[0].$usuario[1]."</h1>";
-
-        //echo $usuarioDois["sobrenome"];
-    ?>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,6 +1,15 @@
 <?php
 $nomeSitema = "Cursos Aí!";
 $usuario = ["nome"=>"Vinicius"];
+
+$produtos = [
+    ["nome"=>"Curso FullStack","preco"=>1200.00,"duracao"=>"5 meses"],
+    ["nome"=>"Curso Marketing","preco"=>1000.00,"duracao"=>"4 meses"],
+
+];
+
+$caixas =["Cursos","Palestras","Artigos"];
+
 ?>
 
 <!DOCTYPE html>
@@ -40,38 +49,52 @@ $usuario = ["nome"=>"Vinicius"];
                 </ul>
             </nav>
         </div>
+        <div class="navbar bg-dark text-white justify-content-center">
+            <ul class="nav">
+                    <?php foreach($caixas as $caixas) { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><?php echo $caixas; ?></a>
+                </li>
+                    <?php } ?>
+            </ul>
+
+            <!-- <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                            <a class="nav-link active" href="#">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Palestras</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Artigos</a>
+                    </li>
+            </ul> <-->
+            <nav>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="container">
-    
-                <div class="d-flex justyfy-content-between main" style="">
-                    <div class="card text-center mr-4">
-                    <h2>Título do produto</h2>
-                    <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
-                        <div class="card-body">
-                            <p class="card-text">R$15,00</p><br>
-                            <a link href="compre já">Buy</a>
-                        </div>
-                    </div>
-                        <div class="card text-center mr-4" style="">
-                            <h2>Título do produto</h2>
-                            <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
-                                <div class="card-body">
-                                    <p class="card-text">R$15,00</p><br>
-                                    <a link href="compre já">Buy</a>
-                                </div>
-                        </div>
-                    <div class="card text-center" style="">
-                        <h2>Título do produto</h2>
-                        <img src="../img/cursoo.jpg" class="card-img-top" alt="curso de t.i.">
+            
+                <div  class="d-flex justify-content-center main" style="">
+                <?php if(isset($produtos) && $produtos != []) {?>
+                    <?php foreach($produtos as $produto){ ?>
+                        <div class="card text-center mr-4">
+                            <h2><?php echo $produto['nome']; ?></h2>
+                            <img id="foto" src="img/curso-ti.jpg" class="card-img-top" alt="curso de t.i.">
                             <div class="card-body">
-                                <p class="card-text">R$15,00</p><br>
-                                <a link href="compre já">Buy</a>
+                                <h5 class="card-text"><?php echo $produto['preco']; ?></h5><br>
+                                <a link href="compre já">Comprar</a>
                             </div>
+                        </div>
+                    <?php } ?>
+                <?php } else { ?>
+                    <h1>Não tem produtos cadastrados nessa sessão :( </h1>
+                <?php } ?>
                     </div>
-                </div>
-
         </section>
     </main>
 </body>
 </html>
+
+"Cursos","Palestras","Artigos"];

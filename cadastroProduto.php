@@ -36,7 +36,7 @@
             <div class="col-12">
             <form action="" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="nomeProduto" placeholder="Nome do Produto"/>
+                    <input type="text" class="form-control" name="nomePro"duto" placeholder="Nome do Produto"/>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="descProduto" placeholder="Descrição do Porduto"/>

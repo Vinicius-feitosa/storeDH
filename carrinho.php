@@ -18,6 +18,10 @@ $caixas =["Cursos","Palestras","Artigos"];
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e6e14bb42d6c3454c83e257219992f7ed6b20876
 
 <?php include_once("header.php") ?>
 
@@ -44,8 +48,94 @@ $caixas =["Cursos","Palestras","Artigos"];
                             </form>
                         </div>
                 </div>
+<<<<<<< HEAD
+=======
+=======
+<header>
+        <div class="navbar">
+            <h1 id="logo">
+            <?php echo $nomeSitema;?>
+            </h1>
+            <nav>
+            <ul class="nav">
+                <?php if (isset($usuario) && $usuario != "") {?>
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Olá <?php echo $usuario{'nome'}; ?></a>
+                    </li>
+                <?php }else {?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cadastrar</a>
+                    </li>
+                <?php } ?>
+                </ul>
+            </nav>
+        </div>
+        <div class="navbar bg-dark text-white justify-content-center">
+            <ul class="nav">
+                    <?php foreach($caixas as $caixas) { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><?php echo $caixas; ?></a>
+                </li>
+                    <?php } ?>
+            </ul>
+
+            <!-- <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                            <a class="nav-link active" href="#">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Palestras</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Artigos</a>
+                    </li>
+            </ul> <-->
+            <nav>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Carrinho de compras</h1>
+                </div>
+                    <div class="col-12">
+                        <div class="row card">
+                            <div class="col-12">
+                                <h3>Você está comprando o curso <?php echo $_GET['nomeProduto'];</h3>
+                            </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <form class="d-flex flex-column p-3" method="post" action="sucesso.php">
+                                        <input type="text" name="nomeCompleto" placeholder="Digite seu nome">
+                                        <input type="text" name="cpf" placeholder="Digite seu CPF">
+                                        <input type="number" name="number" placeholder="Digite o numero do cartão">
+                                        <input type="date" name="validadeCartao" placeholder="Digite a data de validade">
+                                        <input type="passaword" name="codigoCartao" placeholder="Digite o CV">
+                                        <button class="btn btn-success" type="submit">Finalizar á comprar</button>
+                                    </form>
+                                </div>
+                        </div>
+                    </div>
+>>>>>>> 3fe69b8dc00f04338481cf7893fd1409ce4832fa
+>>>>>>> e6e14bb42d6c3454c83e257219992f7ed6b20876
             </div>
         </section>
     </main>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 3fe69b8dc00f04338481cf7893fd1409ce4832fa
+>>>>>>> e6e14bb42d6c3454c83e257219992f7ed6b20876

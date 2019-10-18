@@ -1,7 +1,3 @@
-<?php 
-include_once("variaveis.php");
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,7 +15,9 @@ include_once("variaveis.php");
         <section class="container">
             
                 <div  class="d-flex justify-content-center main" style="">
-                <?php if(isset($produtos) && $produtos != []) {?>
+                <?php
+                
+                if(isset($produtos) && $produtos != []) {?>
                     <?php foreach($produtos as $produto){ ?>
                         <div class="card text-center mr-4">
                             <h2><?php echo $produto['nome']; ?></h2>

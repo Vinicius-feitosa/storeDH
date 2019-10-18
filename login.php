@@ -6,16 +6,17 @@ $usuario = ["email"=>"v.lourenco_@hotmail.com","senha"=>'$2y$10$5G5h/oPTfVMPZvBQ
 if($_POST){
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-    //validando emal
+    //validando email
     if($email == $usuario['email']){
         //validando a senha
         if(password_verify($senha, $usuario['senha'])){
-
+            session_start();
+            $_SESSION['usuario'] = ["nome"=>"Vitor"];
             header('Location:index.php');
-
-        }else{
+        }else {
             echo "Email ou senha inválidas";
         }
+        
     }else {
         echo "Email ou senha inválidas";
     }
